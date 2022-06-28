@@ -1,0 +1,6 @@
+1. Everything happens in a single class Main
+2. Create interface Animal with method void move()
+3. In main() method create anonymous class that will print "I am swimming" in move() method. Use the method.
+4. Create Tiger class with one field Integer legs implementing the Animal interface. Move should print "I am running on a number of legs"
+5. Instantiate the Tiger animal, call the method.
+6. Create Duck class with String color field. Move should print "I am a flying #color# duck".
