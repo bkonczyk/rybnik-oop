@@ -1,9 +1,9 @@
-1. Create abstract class Car with three fields
+1. Create abstract class Vehicle with three fields
  - String make
  - Integer engine
  - Short year
 2. Add method: abstract void runEngine()
-3. Create class Lanos that is extending class Car
+3. Create class Car that is extending class Vehicle
 4. Implement the abstract method that will print out to the console: "I am usually broken"
 5. Add constructor that would set all fields
 6. Create class Tesla that is extending class Car
@@ -12,7 +12,3 @@
 9. Add method void describe() to the Car class that would print out all the data about the car.
 10. Create class RaceTrack with public static void main method
 11. In the method initialize two Lanoses and one Tesla
-
-
-
-

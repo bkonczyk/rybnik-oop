@@ -1,0 +1,2 @@
+1. Ask a user to enter 2 dates and calculate the number of days between these 2 dates.
+2. Make it as nice and as clean-code as you can.

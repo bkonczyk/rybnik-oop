@@ -1,0 +1,3 @@
+// 1. There will be banks data provided by the client soon
+// 2. We cannot wait - we need to provide the data right away
+ so the frontend guys can keep working
