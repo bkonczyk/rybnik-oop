@@ -1,0 +1,6 @@
+1. Stwórz klasę Main z metodą main
+2. Stwórz klasę BasicCalculator - może być wewnątrz tego samego pliku.
+3. W Basic Calculator stwórz metodę void calculate(int x, int y) która wyświetli wiadomości z wynikami mnożenia, dodawania, odejmowania, dzielenia. Pamiętaj o zachowaniu warunków brzegowych (wyświetl odpowiednią wiadomość przy próbie dzielenia przez 0)
+5. W klasie main pobierz od użytkownika dwie liczby, a potem korzystając z BasicCalculatora wywołaj obliczenie.
+
+Wszystko po angielsku, wszystko ładnie drukowane w konsoli :-)
