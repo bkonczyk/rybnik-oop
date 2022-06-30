@@ -14,6 +14,13 @@ public class Bank {
         return name;
     }
 
+    public void setName(String newName) {
+        if (newName.length() < 3) {
+            throw new IllegalArgumentException("Name length cannot be shorter than 3 characters");
+        }
+        name = newName;
+    }
+
     public int getNumberOfClients() {
         return numberOfClients;
     }
