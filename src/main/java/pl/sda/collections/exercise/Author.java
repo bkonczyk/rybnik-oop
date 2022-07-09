@@ -2,6 +2,9 @@ package pl.sda.collections.exercise;
 
 public class Author {
 
+    public static Long lastId = 0L;
+
+    private final Long id;
     private final String firstName;
     private final String lastName;
 
@@ -13,7 +16,12 @@ public class Author {
         return lastName;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     private Author(String firstName, String lastName) {
+        this.id = ++lastId;
         this.firstName = firstName;
         this.lastName = lastName;
     }

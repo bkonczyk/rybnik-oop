@@ -2,9 +2,16 @@ package pl.sda.collections.exercise;
 
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Optional;
 import java.util.Set;
 
 public class Library {
+
+//1. Rozszerzyć klasę Author o pole Long id;
+//2. Dodać pole Long id normalnie do konstruktora
+//W library zaimplementować metodę:
+//private static Author findById(Set<Author> authors, Long id)
+//3. Wymyśleć, jak można zrobić, żeby przy tworzeniu Authora nie było potrzeby manualnego podawania mu id.
 
     public static void main(String[] args) {
         HashSet<Author> authors = getAuthors();
@@ -27,7 +34,18 @@ public class Library {
             }
         }
         System.out.println("There is " + i + " such authors");
+        System.out.println(findById(authors, 5L));
 
+        Author foundAuthor = findById(authors, 158L);
+        if (foundAuthor != null) {
+            System.out.println(foundAuthor.getFirstName());
+        }
+
+        Optional<Author> byId = getById(authors, 158L);
+        if(byId.isPresent()) {
+            Author author = byId.get();
+            System.out.println(author.getFirstName());
+        }
     }
 
     private static HashSet<Author> getAuthors() {
@@ -43,5 +61,23 @@ public class Library {
                         Author.of("Atul", "Gawande")
                 )
         );
+    }
+
+    public static Author findById(Set<Author> authors, Long id) {
+        for (Author author : authors) {
+            if (author.getId().equals(id)) {
+                return author;
+            }
+        }
+        return null;
+    }
+
+    public static Optional<Author> getById(Set<Author> authors, Long id) {
+        for (Author author : authors) {
+            if (author.getId().equals(id)) {
+                return Optional.of(author);
+            }
+        }
+        return Optional.empty();
     }
 }
