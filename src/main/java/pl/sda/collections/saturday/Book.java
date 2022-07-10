@@ -3,7 +3,7 @@ package pl.sda.collections.saturday;
 import java.math.BigDecimal;
 import java.util.List;
 
-public class Book {
+public class Book implements Comparable {
 
     private final Long id;
     private final String title;
@@ -19,6 +19,32 @@ public class Book {
         this.year = year;
         this.genre = genre;
         this.authors = authors;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public Genre getGenre() {
+        return genre;
+    }
+
+    public Integer getYear() {
+        return year;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public List<Author> getAuthors() {
+        return authors;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Book b = (Book) o;
+        return this.getTitle().compareTo(b.getTitle());
     }
 }
 

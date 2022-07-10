@@ -19,7 +19,8 @@ public class AuthorsInitializer {
         List<Author> randomAuthors = new ArrayList<>();
         for (int i = 0; i < numberOfAuthors; i++) {
             int randomId = random.nextInt(size);
-            randomAuthors.add(authors.get(randomId));
+            Author author = authors.get(randomId);
+            randomAuthors.add(author);
         }
         return randomAuthors;
     }

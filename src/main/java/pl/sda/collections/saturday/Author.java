@@ -13,6 +13,14 @@ public class Author {
         this.lastName = lastName;
         this.gender = gender;
     }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
 }
 
 enum Gender {
